@@ -97,6 +97,7 @@ searchBar.addEventListener('keyup', search_coffee);
 
 
 
+// ADD COFFEE FUNCTIONALITY
 var newCoffeeName = document.querySelector('#coffee-name');
 var newRoast =  document.querySelector('#new-roast');
 var submitNewCoffee = document.querySelector('#submit-new-coffee');
