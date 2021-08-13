@@ -2,9 +2,9 @@
 
 
 function renderCoffee(coffee) {
-    var html ='<div class="card m-2 text-white bg-dark mb-3" style="max-width: 12rem;">'
-    html += '<div class="coffee col card-body">';
-    html += '<h3 class="card-title">' + coffee.name + '</h3>';
+    var html ='<div class="card m-2 text-white bg-dark mb-3 coffee" style="max-width: 12rem;">'
+    html += '<div class="col card-body">';
+    html += '<h4 class="card-title">' + coffee.name + '</h4>';
     html += '<p class="card-text">' + coffee.roast + '</p>';
     html += '<br>';
     html += '</div>';
@@ -72,13 +72,14 @@ var coffees = [
 ];
 
 function CreateCoffee() {
-    this.id = 15;
-    this.name = newCoffeeName;
-    this.roast = newRoast;
-    coffees.push()
 
+    var newlyCreatedCoffee = {
+        id: coffees.length + 1,
+        name: newCoffeeName.value,
+        roast: newRoast.value
+    }
+    coffees.push(newlyCreatedCoffee);
 }
-
 
 
 
@@ -98,3 +99,7 @@ searchBar.addEventListener('keyup', search_coffee);
 
 var newCoffeeName = document.querySelector('#coffee-name');
 var newRoast =  document.querySelector('#new-roast');
+var submitNewCoffee = document.querySelector('#submit-new-coffee');
+
+submitNewCoffee.addEventListener('click', CreateCoffee);
+submitNewCoffee.addEventListener('click', updateCoffees);
